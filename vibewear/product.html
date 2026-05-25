@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARCON DELTA PRO | TODAYSFASHION</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=DM+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+
+    <!-- Shopify Web Components -->
+    <script type="module" src="https://cdn.shopify.com/storefront/web-components.js"></script>
+    <script>
+      // Read product handle from URL and set it once DOM is ready
+      document.addEventListener('DOMContentLoaded', () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const handle = urlParams.get('handle');
+        if (handle) {
+          document.getElementById('pdp-context').setAttribute('handle', handle);
+        }
+      });
+    </script>
+</head>
+<body>
+<shopify-store store-domain="todaysfashion-883.myshopify.com" public-access-token="150aa004803dd6eb6e97b430f08ab1a8">
+<shopify-cart id="main-cart"></shopify-cart>
+
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">TODAYS<span>FASHION</span></a>
+            
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">HOME</a>
+                <a href="shop.html" class="nav-link">SALE</a>
+                <a href="shop.html" class="nav-link">SHOP</a>
+                <a href="products.html" class="nav-link">PRODUCTS</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="nav-icon" aria-label="Search">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                </button>
+                <button class="nav-icon" aria-label="Cart" onclick="document.getElementById('main-cart').showModal()">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+                </button>
+                <a href="#" class="btn btn-accent" style="min-height:36px; padding:0 16px; font-size:14px;">LOGIN</a>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer">
+        <div class="drawer-header">
+            <a href="index.html" class="nav-logo">TODAYS<span>FASHION</span></a>
+            <button class="close-drawer" aria-label="Close menu">×</button>
+        </div>
+        <div class="drawer-links">
+            <a href="index.html" class="drawer-link">HOME</a>
+            <a href="shop.html" class="drawer-link">SHOP</a>
+            <a href="contact.html" class="drawer-link">CONTACT</a>
+        </div>
+    </div>
+
+    <!-- Product Section -->
+    <section class="section" style="padding-top: 40px;">
+        <shopify-context id="pdp-context" type="product" handle="short-sleeve-t-shirt">
+            <template>
+                <div class="container pdp-container">
+                    <!-- Left: Gallery -->
+                    <div class="pdp-gallery">
+                        <div class="main-img-container">
+                            <shopify-media query="product.selectedOrFirstAvailableVariant.image" class="main-product-img"></shopify-media>
+                        </div>
+                    </div>
+
+                    <!-- Right: Info -->
+                    <div class="pdp-info">
+                        <div class="breadcrumb" style="margin-bottom: 24px;">
+                            <a href="index.html" style="color:var(--color-charcoal)">HOME</a> &nbsp;/&nbsp; <a href="shop.html" style="color:var(--color-charcoal)">SHOP</a> &nbsp;/&nbsp; <shopify-data query="product.vendor"></shopify-data>
+                        </div>
+                        
+                        <h1 class="pdp-title" style="margin-bottom: 8px;">
+                            <shopify-data query="product.title"></shopify-data>
+                        </h1>
+                        <div style="font-size:14px; font-family:var(--font-body); letter-spacing:0.1em; margin-bottom:16px;">
+                            <shopify-data query="product.vendor"></shopify-data>
+                        </div>
+
+                        <div class="pdp-price-row">
+                            <span class="pdp-price">
+                                <shopify-money query="product.selectedOrFirstAvailableVariant.price"></shopify-money>
+                            </span>
+                        </div>
+
+                        <div class="pdp-desc" style="margin-bottom: 24px;">
+                            <shopify-data query="product.descriptionHtml"></shopify-data>
+                        </div>
+
+                        <!-- Variant Selector -->
+                        <div class="pdp-selectors" style="margin-bottom: 32px;">
+                            <shopify-variant-selector></shopify-variant-selector>
+                        </div>
+
+                        <!-- Actions -->
+                        <div class="pdp-actions" style="margin-top: 24px; display:flex; flex-direction:column; gap:12px;">
+                            <button class="btn btn-primary add-to-cart-btn" onclick="document.getElementById('main-cart').addLine(event).showModal();" style="width:100%; height:56px;">ADD TO CART</button>
+                            <button class="btn btn-secondary" onclick="document.querySelector('shopify-store').buyNow(event)" style="width:100%; height:56px; background:#fff; color:#000; border:2px solid #000;">BUY IT NOW</button>
+                        </div>
+
+                        <!-- Highlights -->
+                        <div class="pdp-highlights">
+                            <div class="highlight-row">
+                                <span>🚚</span>
+                                <span style="font-family: var(--font-body); font-size: 14px; font-weight:500;">Free Delivery on orders above ₹999</span>
+                            </div>
+                            <div class="highlight-row">
+                                <span>↩️</span>
+                                <span style="font-family: var(--font-body); font-size: 14px; font-weight:500;">30-Day Easy Returns</span>
+                            </div>
+                            <div class="highlight-row">
+                                <span>🛡️</span>
+                                <span style="font-family: var(--font-body); font-size: 14px; font-weight:500;">100% Authentic Guarantee</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+            <div shopify-loading-placeholder style="padding: 100px; text-align: center; font-size: 24px; font-family: var(--font-display);">LOADING PRODUCT...</div>
+        </shopify-context>
+    </section>
+
+    <!-- Related Products -->
+    <section class="section bg-cream">
+        <div class="container reveal">
+            <h2 style="font-size: 40px; margin-bottom: 40px;">YOU MIGHT ALSO LIKE</h2>
+            <shopify-context type="collection" handle="all">
+                <template>
+                    <shopify-list-context type="product" query="collection.products" first="4">
+                        <template>
+                            <div style="display:inline-block; width:24%; margin-right:1%; vertical-align:top; margin-bottom:16px;">
+                                <div class="product-card">
+                                    <div class="product-card__image-container">
+                                        <a shopify-attr--href="'product.html?handle=' + product.handle">
+                                            <shopify-media query="product.featuredImage" class="product-card__image"></shopify-media>
+                                        </a>
+                                    </div>
+                                    <div class="product-card__info">
+                                        <a shopify-attr--href="'product.html?handle=' + product.handle" class="product-card__title" style="text-decoration:none; color:inherit;">
+                                            <shopify-data query="product.title"></shopify-data>
+                                        </a>
+                                        <div class="product-card__price" style="margin-top:6px;">
+                                            <shopify-money query="product.priceRange.minVariantPrice"></shopify-money>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                        <div shopify-loading-placeholder style="padding: 40px; text-align: center;">Loading products...</div>
+                    </shopify-list-context>
+                </template>
+                <div shopify-loading-placeholder style="padding: 40px; text-align: center;">Loading recommendations...</div>
+            </shopify-context>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo">TODAYS<span>FASHION</span></a>
+                    <p class="footer-desc">UNLEASH YOUR STYLE. WEAR THE REVOLUTION. Bold streetwear meets modern rebellion.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">In</a>
+                        <a href="#" class="social-link">Tw</a>
+                        <a href="#" class="social-link">Tk</a>
+                        <a href="#" class="social-link">Yt</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>SHOP</h4>
+                    <div class="footer-links">
+                        <a href="shop.html" class="footer-link">New Arrivals</a>
+                        <a href="shop.html" class="footer-link">Hoodies</a>
+                        <a href="shop.html" class="footer-link">Jackets</a>
+                        <a href="shop.html" class="footer-link">Tees</a>
+                        <a href="shop.html" class="footer-link">Accessories</a>
+                        <a href="shop.html" class="footer-link text-brand">Sale</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>INFO</h4>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Careers</a>
+                        <a href="#" class="footer-link">Press</a>
+                        <a href="#" class="footer-link">Stockists</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>SUPPORT</h4>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">FAQ</a>
+                        <a href="#" class="footer-link">Shipping</a>
+                        <a href="#" class="footer-link">Returns</a>
+                        <a href="#" class="footer-link">Size Guide</a>
+                        <a href="contact.html" class="footer-link">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">© 2026 TODAYSFASHION. ALL RIGHTS RESERVED.</div>
+                <div class="payment-methods">
+                    <span>VISA</span> • <span>MC</span> • <span>UPI</span> • <span>PAYPAL</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-big-logo">TODAYS<span class="accent">F</span>ASHION</div>
+    </footer>
+</shopify-store>
+
+    <script src="js/main.js"></script>
+    <script src="js/product.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOP ALL DROPS | TODAYSFASHION</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=DM+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+
+    <!-- Shopify Web Components -->
+    <script type="module" src="https://cdn.shopify.com/storefront/web-components.js"></script>
+</head>
+<body>
+<shopify-store store-domain="todaysfashion-883.myshopify.com" public-access-token="150aa004803dd6eb6e97b430f08ab1a8">
+<shopify-cart id="main-cart"></shopify-cart>
+
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">TODAYS<span>FASHION</span></a>
+            
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">HOME</a>
+                <a href="shop.html" class="nav-link">SALE</a>
+                <a href="shop.html" class="nav-link active">SHOP</a>
+                <a href="products.html" class="nav-link">PRODUCTS</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="nav-icon" aria-label="Search">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                </button>
+                <button class="nav-icon" aria-label="Cart" onclick="document.getElementById('main-cart').showModal()">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+                </button>
+                <a href="#" class="btn btn-accent" style="min-height:36px; padding:0 16px; font-size:14px;">LOGIN</a>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer">
+        <div class="drawer-header">
+            <a href="index.html" class="nav-logo">TODAYS<span>FASHION</span></a>
+            <button class="close-drawer" aria-label="Close menu">×</button>
+        </div>
+        <div class="drawer-links">
+            <a href="index.html" class="drawer-link">HOME</a>
+            <a href="shop.html" class="drawer-link">SHOP</a>
+            <a href="contact.html" class="drawer-link">CONTACT</a>
+        </div>
+    </div>
+
+    <!-- Page Hero -->
+    <div class="page-hero">
+        <div class="container reveal">
+            <h1>SHOP ALL DROPS</h1>
+            <div class="breadcrumb">
+                <a href="index.html">HOME</a> &nbsp;/&nbsp; SHOP
+            </div>
+        </div>
+    </div>
+
+    <section class="section bg-cream" style="padding-top: 40px;">
+        <div class="container shop-container">
+            <!-- Sidebar -->
+            <aside class="shop-sidebar reveal-left">
+                <div class="filter-group">
+                    <h4>BRANDS</h4>
+                    <div class="checkbox-list" id="brand-filters">
+                        <label><input type="radio" name="filter" value="all" checked> All Brands</label>
+                        <label><input type="radio" name="filter" value="jack-jones"> Jack & Jones</label>
+                        <label><input type="radio" name="filter" value="spykar"> Spykar</label>
+                        <label><input type="radio" name="filter" value="uspa"> USPA</label>
+                        <label><input type="radio" name="filter" value="mufti"> Mufti</label>
+                        <label><input type="radio" name="filter" value="blackberrys"> Blackberrys</label>
+                        <label><input type="radio" name="filter" value="weddings"> Weddings Collection</label>
+                        <label><input type="radio" name="filter" value="twills"> Twills</label>
+                        <label><input type="radio" name="filter" value="being-human"> Being Human</label>
+                        <label><input type="radio" name="filter" value="arrow"> Arrow</label>
+                        <label><input type="radio" name="filter" value="killer-x"> Killer X</label>
+                        <label><input type="radio" name="filter" value="pepe-jeans"> Pepe Jeans</label>
+                        <label><input type="radio" name="filter" value="rookies"> Rookies</label>
+                        <label><input type="radio" name="filter" value="levis"> Levis</label>
+                        <label><input type="radio" name="filter" value="crimsoune-club"> Crimsoune Club</label>
+                    </div>
+                    <script>
+                        document.addEventListener("DOMContentLoaded", () => {
+                            const params = new URLSearchParams(window.location.search);
+                            let brand = params.get("brand") || 'all';
+                            
+                            const updateFilter = (val) => {
+                                // Client-side filtering
+                                const cards = document.querySelectorAll('.product-grid-filter');
+                                cards.forEach(card => {
+                                    if (val === 'all') {
+                                        card.style.display = 'inline-block';
+                                    } else {
+                                        // The vendor handle usually matches the value, e.g. "Jack & Jones" -> "jack-jones"
+                                        const vendor = (card.getAttribute('data-vendor') || '').toLowerCase().replace(/ & /g, '-').replace(/\s+/g, '-');
+                                        if (vendor === val || (val === 'jack-jones' && vendor.includes('jack'))) {
+                                            card.style.display = 'inline-block';
+                                        } else {
+                                            card.style.display = 'none';
+                                        }
+                                    }
+                                });
+                            };
+
+                            const radios = document.querySelectorAll('input[name="filter"]');
+                            radios.forEach(radio => {
+                                radio.addEventListener('change', (e) => {
+                                    updateFilter(e.target.value);
+                                    const newUrl = new URL(window.location);
+                                    if(e.target.value === 'all') newUrl.searchParams.delete('brand');
+                                    else newUrl.searchParams.set('brand', e.target.value);
+                                    window.history.pushState({}, '', newUrl);
+                                });
+                            });
+
+                            // We need to wait for Shopify components to render before filtering
+                            // A simple mutation observer on the list context
+                            const shopList = document.getElementById('shop-list');
+                            if (shopList) {
+                                const observer = new MutationObserver(() => {
+                                    if (document.querySelectorAll('.product-grid-filter').length > 0) {
+                                        const checkedRadio = document.querySelector('input[name="filter"]:checked');
+                                        if (checkedRadio) updateFilter(checkedRadio.value);
+                                    }
+                                });
+                                observer.observe(shopList, { childList: true, subtree: true });
+                            }
+
+                            if (brand) {
+                                const radio = document.querySelector(`input[name="filter"][value="${brand}"]`);
+                                if (radio) radio.checked = true;
+                            }
+                        });
+                    </script>
+                </div>
+
+                <div class="filter-group">
+                    <h4>CATEGORY</h4>
+                    <div class="checkbox-list">
+                        <label><input type="radio" name="filter" value="t-shirts" onchange="document.getElementById('shop-collection').setAttribute('handle', this.value)"> T-Shirts</label>
+                        <label><input type="radio" name="filter" value="jeans" onchange="document.getElementById('shop-collection').setAttribute('handle', this.value)"> Jeans</label>
+                        <label><input type="radio" name="filter" value="suits" onchange="document.getElementById('shop-collection').setAttribute('handle', this.value)"> Suits</label>
+                        <label><input type="radio" name="filter" value="hoodies" onchange="document.getElementById('shop-collection').setAttribute('handle', this.value)"> Hoodies</label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4>SIZE</h4>
+                    <div class="size-grid">
+                        <button class="size-btn" data-size="XS">XS</button>
+                        <button class="size-btn" data-size="S">S</button>
+                        <button class="size-btn" data-size="M">M</button>
+                        <button class="size-btn" data-size="L">L</button>
+                        <button class="size-btn" data-size="XL">XL</button>
+                        <button class="size-btn" data-size="XXL">XXL</button>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4>COLOR</h4>
+                    <div class="color-grid">
+                        <div class="color-swatch" style="background-color: #0A0A0A;" data-color="black"></div>
+                        <div class="color-swatch" style="background-color: #FFFFFF; border-color: #CCC;" data-color="white"></div>
+                        <div class="color-swatch" style="background-color: #4A5240;" data-color="olive"></div>
+                        <div class="color-swatch" style="background-color: #A0522D;" data-color="rust"></div>
+                        <div class="color-swatch" style="background-color: #E84400;" data-color="orange"></div>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4>PRICE RANGE</h4>
+                    <input type="range" min="0" max="500" value="500" class="price-range-slider">
+                    <div class="price-display">$0 - $500</div>
+                </div>
+            </aside>
+
+            <!-- Main Product Grid -->
+            <main class="shop-main reveal">
+                <div class="shop-controls">
+                    <div class="product-count">Shop</div>
+                </div>
+
+                <shopify-list-context id="shop-list" type="product" query="products" first="20">
+                    <template>
+                        <div class="grid-3 product-grid-filter" shopify-attr--data-vendor="product.vendor" style="display:inline-block; width:32%; margin-right:1%; vertical-align:top; margin-bottom: 24px;">
+                                    <div class="product-card">
+                                        <div class="product-card__image-container">
+                                            <a shopify-attr--href="'product.html?handle=' + product.handle">
+                                                <shopify-media query="product.featuredImage" class="product-card__image"></shopify-media>
+                                            </a>
+                                        </div>
+                                        <div class="product-card__info">
+                                            <a shopify-attr--href="'product.html?handle=' + product.handle" class="product-card__title" style="text-decoration:none; color:inherit;">
+                                                <shopify-data query="product.title"></shopify-data>
+                                            </a>
+                                            <div style="font-size:12px; color:var(--color-gray); font-family:var(--font-body); letter-spacing:0.1em; text-transform:uppercase; margin-top:4px;">
+                                                <shopify-data query="product.vendor"></shopify-data>
+                                            </div>
+                                            <div class="product-card__price" style="margin-top:6px;">
+                                                <shopify-money query="product.priceRange.minVariantPrice"></shopify-money>
+                                            </div>
+                                            <div class="product-card__action" style="margin-top: 16px;">
+                                                <a shopify-attr--href="'product.html?handle=' + product.handle" class="btn btn-primary" style="width: 100%;">VIEW DETAILS</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </template>
+                        <div shopify-loading-placeholder style="padding: 40px; text-align: center;">Loading products...</div>
+                </shopify-list-context>
+
+                <!-- Pagination -->
+                <div class="pagination" style="margin-top: 40px;">
+                    <button class="btn btn-secondary" onclick="document.getElementById('shop-list').previousPage()">PREVIOUS</button>
+                    <button class="btn btn-secondary" onclick="document.getElementById('shop-list').nextPage()" style="margin-left: 10px;">NEXT</button>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <!-- Footer content (same as index.html) -->
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo">TODAYS<span>FASHION</span></a>
+                    <p class="footer-desc">UNLEASH YOUR STYLE. WEAR THE REVOLUTION. Bold streetwear meets modern rebellion.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">In</a>
+                        <a href="#" class="social-link">Tw</a>
+                        <a href="#" class="social-link">Tk</a>
+                        <a href="#" class="social-link">Yt</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>SHOP</h4>
+                    <div class="footer-links">
+                        <a href="shop.html" class="footer-link">New Arrivals</a>
+                        <a href="shop.html" class="footer-link">Hoodies</a>
+                        <a href="shop.html" class="footer-link">Jackets</a>
+                        <a href="shop.html" class="footer-link">Tees</a>
+                        <a href="shop.html" class="footer-link">Accessories</a>
+                        <a href="shop.html" class="footer-link text-brand">Sale</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>INFO</h4>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Careers</a>
+                        <a href="#" class="footer-link">Press</a>
+                        <a href="#" class="footer-link">Stockists</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>SUPPORT</h4>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">FAQ</a>
+                        <a href="#" class="footer-link">Shipping</a>
+                        <a href="#" class="footer-link">Returns</a>
+                        <a href="#" class="footer-link">Size Guide</a>
+                        <a href="contact.html" class="footer-link">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">© 2026 TODAYSFASHION. ALL RIGHTS RESERVED.</div>
+                <div class="payment-methods">
+                    <span>VISA</span> • <span>MC</span> • <span>UPI</span> • <span>PAYPAL</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-big-logo">TODAYS<span class="accent">F</span>ASHION</div>
+    </footer>
+</shopify-store>
+
+    <script src="js/main.js"></script>
+    <script src="js/shop.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

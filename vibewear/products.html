@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRANDS & COLLECTIONS | TODAYSFASHION</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=DM+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+
+    <!-- Shopify Web Components -->
+    <script type="module" src="https://cdn.shopify.com/storefront/web-components.js"></script>
+
+    <style>
+        .brand-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+            margin-bottom: 80px;
+        }
+        
+        .brand-card {
+            position: relative;
+            display: block;
+            overflow: hidden;
+            border-radius: 4px;
+            aspect-ratio: 3/4;
+            text-decoration: none;
+            background-color: var(--color-black);
+            transition: transform 0.4s ease;
+        }
+
+        .brand-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .brand-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease, opacity 0.4s ease;
+            opacity: 0.85;
+        }
+        
+        .brand-card:hover img {
+            transform: scale(1.08);
+            opacity: 1;
+        }
+        
+        .brand-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%);
+            display: flex;
+            align-items: flex-end;
+            padding: 30px 20px;
+            pointer-events: none;
+        }
+        
+        .brand-title {
+            color: var(--color-white);
+            font-family: var(--font-display);
+            font-size: 32px;
+            line-height: 1;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+<shopify-store store-domain="todaysfashion-883.myshopify.com" public-access-token="150aa004803dd6eb6e97b430f08ab1a8">
+<shopify-cart id="main-cart"></shopify-cart>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">TODAYS<span>FASHION</span></a>
+            
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">HOME</a>
+                <a href="shop.html" class="nav-link">SALE</a>
+                <a href="shop.html" class="nav-link">SHOP</a>
+                <a href="products.html" class="nav-link active">PRODUCTS</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="nav-icon" aria-label="Search">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                </button>
+                <button class="nav-icon" aria-label="Cart" onclick="document.getElementById('main-cart').showModal()">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+                </button>
+                <a href="#" class="btn btn-accent" style="min-height:36px; padding:0 16px; font-size:14px;">LOGIN</a>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <svg class="icon" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer">
+        <div class="drawer-header">
+            <a href="index.html" class="nav-logo">TODAYS<span>FASHION</span></a>
+            <button class="close-drawer" aria-label="Close menu">×</button>
+        </div>
+        <div class="drawer-links">
+            <a href="index.html" class="drawer-link">HOME</a>
+            <a href="shop.html" class="drawer-link">SHOP</a>
+            <a href="products.html" class="drawer-link">PRODUCTS</a>
+            <a href="contact.html" class="drawer-link">CONTACT</a>
+        </div>
+    </div>
+
+    <!-- Page Hero -->
+    <div class="page-hero">
+        <div class="container reveal">
+            <h1>BRANDS & COLLECTIONS</h1>
+            <div class="breadcrumb">
+                <a href="index.html">HOME</a> &nbsp;/&nbsp; PRODUCTS
+            </div>
+        </div>
+    </div>
+
+    <!-- Brands Grid Section -->
+    <section class="section bg-cream">
+        <div class="container">
+            <div class="brand-grid reveal">
+                <a href="shop.html?brand=jack-jones" class="brand-card">
+                    <img src="img/brands/brand_jack_jones_1779374659374.png" alt="Jack and Jones">
+                    <div class="brand-overlay">
+                        <div class="brand-title">Jack & Jones</div>
+                    </div>
+                </a>
+                <a href="shop.html?brand=spykar" class="brand-card">
+                    <img src="img/brands/brand_spykar_1779374676136.png" alt="Spykar">
+                    <div class="brand-overlay">
+                        <div class="brand-title">Spykar</div>
+                    </div>
+                </a>
+                <a href="shop.html?brand=uspa" class="brand-card">
+                    <img src="img/brands/brand_uspa_1779374695004.png" alt="USPA">
+                    <div class="brand-overlay">
+                        <div class="brand-title">USPA</div>
+                    </div>
+                </a>
+                <a href="shop.html?brand=mufti" class="brand-card">
+                    <img src="img/brands/brand_mufti_1779374714705.png" alt="Mufti">
+                    <div class="brand-overlay">
+                        <div class="brand-title">Mufti</div>
+                    </div>
+                </a>
+                <a href="shop.html?brand=blackberrys" class="brand-card">
+                    <img src="img/brands/brand_blackberrys_1779374730666.png" alt="Blackberrys">
+                    <div class="brand-overlay">
+                        <div class="brand-title">Blackberrys</div>
+                    </div>
+                </a>
+                <a href="shop.html?brand=weddings" class="brand-card">
+                    <img src="img/brands/brand_weddings_1779374755929.png" alt="Weddings Collection">
+                    <div class="brand-overlay">
+                        <div class="brand-title">Weddings Collection</div>
+                    </div>
+                </a>
+                <a href="shop.html?brand=twills" class="brand-card">
+                    <img src="img/brands/brand_twills_1779374772875.png" alt="Twills">
+                    <div class="brand-overlay">
+                        <div class="brand-title">Twills</div>
+                    </div>
+                </a>
+                <a href="shop.html?brand=being-human" class="brand-card">
+                    <img src="img/brands/brand_being_human_1779374788868.png" alt="Being Human">
+                    <div class="brand-overlay">
+                        <div class="brand-title">Being Human</div>
+                    </div>
+                </a>
+                <a href="shop.html?brand=arrow" class="brand-card">
+                    <img src="img/brands/brand_arrow_1779374804893.png" alt="Arrow">
+                    <div class="brand-overlay">
+                        <div class="brand-title">Arrow</div>
+                    </div>
+                </a>
+                <a href="shop.html?brand=killer-x" class="brand-card">
+                    <img src="img/brands/brand_killer_x_1779374820726.png" alt="Killer X">
+                    <div class="brand-overlay">
+                        <div class="brand-title">Killer X</div>
+                    </div>
+                </a>
+                <a href="shop.html?brand=pepe-jeans" class="brand-card">
+                    <img src="img/brands/brand_pepe_jeans_1779374847566.png" alt="Pepe Jeans">
+                    <div class="brand-overlay">
+                        <div class="brand-title">Pepe Jeans</div>
+                    </div>
+                </a>
+                <a href="shop.html?brand=rookies" class="brand-card">
+                    <img src="img/brands/brand_rookies_1779374863664.png" alt="Rookies">
+                    <div class="brand-overlay">
+                        <div class="brand-title">Rookies</div>
+                    </div>
+                </a>
+                <a href="shop.html?brand=levis" class="brand-card">
+                    <img src="img/brands/brand_levis_1779374883778.png" alt="Levis">
+                    <div class="brand-overlay">
+                        <div class="brand-title">Levis</div>
+                    </div>
+                </a>
+                <a href="shop.html?brand=crimsoune-club" class="brand-card">
+                    <img src="img/brands/brand_crimsoune_club_1779374901568.png" alt="Crimsoune Club">
+                    <div class="brand-overlay">
+                        <div class="brand-title">Crimsoune Club</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo">TODAYS<span>FASHION</span></a>
+                    <p class="footer-desc">UNLEASH YOUR STYLE. WEAR THE REVOLUTION. Bold streetwear meets modern rebellion.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">In</a>
+                        <a href="#" class="social-link">Tw</a>
+                        <a href="#" class="social-link">Tk</a>
+                        <a href="#" class="social-link">Yt</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>SHOP</h4>
+                    <div class="footer-links">
+                        <a href="shop.html" class="footer-link">New Arrivals</a>
+                        <a href="shop.html" class="footer-link">Hoodies</a>
+                        <a href="shop.html" class="footer-link">Jackets</a>
+                        <a href="shop.html" class="footer-link">Tees</a>
+                        <a href="products.html" class="footer-link text-brand">Brands</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>INFO</h4>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Careers</a>
+                        <a href="#" class="footer-link">Press</a>
+                        <a href="#" class="footer-link">Stockists</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>SUPPORT</h4>
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">FAQ</a>
+                        <a href="#" class="footer-link">Shipping</a>
+                        <a href="#" class="footer-link">Returns</a>
+                        <a href="#" class="footer-link">Size Guide</a>
+                        <a href="contact.html" class="footer-link">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">© 2026 TODAYSFASHION. ALL RIGHTS RESERVED.</div>
+                <div class="payment-methods">
+                    <span>VISA</span> • <span>MC</span> • <span>UPI</span> • <span>PAYPAL</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-big-logo">TODAYS<span class="accent">F</span>ASHION</div>
+    </footer>
+</shopify-store>
+
+    <!-- JS -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
