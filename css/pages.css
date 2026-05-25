@@ -114,8 +114,9 @@
 
 @media (max-width: 992px) {
   .hero-grid { grid-template-columns: 1fr; }
-  .hero-image-col { min-height: 400px; order: -1; margin-bottom: 40px; }
-  .hero-image { position: relative; top: 0; right: 0; width: 100%; height: 100%; }
+  .hero-image-col { min-height: 400px; order: -1; margin-bottom: 40px; display: flex; justify-content: center; }
+  .hero-image { position: relative; top: 0; right: 0; width: 100%; height: auto; max-height: 50vh; border-radius: 8px; object-fit: cover; }
+  .hero-price-badge { bottom: -20px; right: 10%; width: 90px; height: 90px; font-size: 28px; }
 }
 
 /* What is TodaysFashion */
@@ -181,6 +182,12 @@
 @media (max-width: 992px) {
   .story-grid { grid-template-columns: 1fr; }
   .story-collage { height: 400px; margin-top: 40px; }
+  .collage-img:nth-child(1) { width: 50%; height: 50%; }
+  .collage-img:nth-child(2) { width: 45%; height: 45%; top: 5%; }
+  .collage-img:nth-child(3) { width: 65%; height: 50%; right: 5%; }
+}
+@media (max-width: 480px) {
+  .story-collage { height: 300px; }
 }
 
 /* Testimonial Section */
@@ -616,10 +623,12 @@
 .shop-main shopify-context {
   display: block;
 }
-.shop-main shopify-list-context {
+.shop-main shopify-list-context,
+.home-product-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+  width: 100%;
 }
 .shop-main .product-card {
   border: 1px solid #e0e0e0;
@@ -687,12 +696,14 @@
 }
 
 @media (max-width: 1200px) {
-  .shop-main shopify-list-context {
+  .shop-main shopify-list-context,
+  .home-product-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 600px) {
-  .shop-main shopify-list-context {
+  .shop-main shopify-list-context,
+  .home-product-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -736,9 +747,16 @@
 .thumbnail-row {
   display: flex;
   gap: 16px;
+  overflow-x: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.thumbnail-row::-webkit-scrollbar {
+  display: none;
 }
 .thumbnail-img {
   width: 80px; height: 100px;
+  flex-shrink: 0;
   object-fit: cover;
   cursor: pointer;
   opacity: 0.6;
