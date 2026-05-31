@@ -487,9 +487,10 @@
 
 .shop-container {
   display: flex;
-  gap: 40px;
+  flex-direction: column;
+  gap: 20px;
   margin-top: 40px;
-  align-items: flex-start;
+  align-items: stretch;
 }
 
 .shop-sidebar {
@@ -623,7 +624,13 @@
 .shop-main shopify-context {
   display: block;
 }
-.shop-main shopify-list-context,
+.shop-grid,
+.shop-main shopify-list-context {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 24px;
+  width: 100%;
+}
 .home-product-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -696,13 +703,25 @@
 }
 
 @media (max-width: 1200px) {
-  .shop-main shopify-list-context,
+  .shop-grid,
+  .shop-main shopify-list-context {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
   .home-product-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+@media (max-width: 900px) {
+  .shop-grid,
+  .shop-main shopify-list-context {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
 @media (max-width: 600px) {
-  .shop-main shopify-list-context,
+  .shop-grid,
+  .shop-main shopify-list-context {
+    grid-template-columns: 1fr !important;
+  }
   .home-product-grid {
     grid-template-columns: 1fr;
   }
@@ -1036,3 +1055,171 @@
   color: var(--color-black); text-decoration: underline; display: inline-block;
 }
 .read-more:hover { color: var(--color-brand); }
+
+/* ===== MOBILE OPTIMIZATIONS ===== */
+
+/* Hero section mobile */
+@media (max-width: 768px) {
+  .hero .hero-title {
+    font-size: clamp(36px, 10vw, 56px) !important;
+  }
+  .hero .hero-desc {
+    font-size: 16px !important;
+    margin-bottom: 30px !important;
+  }
+  .hero .hero-content {
+    padding: 30px 0 !important;
+  }
+  .hero .btn {
+    padding: 14px 32px !important;
+    font-size: 16px !important;
+  }
+}
+
+/* Page Hero mobile */
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 60px 0 30px;
+  }
+  .page-hero h1 {
+    font-size: clamp(32px, 8vw, 48px);
+  }
+}
+
+/* Shop brand tabs mobile */
+@media (max-width: 768px) {
+  .tabs-container {
+    gap: 8px;
+    padding: 0 4px 8px;
+    margin-bottom: 24px !important;
+  }
+  .tab-btn {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+}
+
+/* Shop grid mobile sizing */
+@media (max-width: 600px) {
+  .shop-main .product-card__info {
+    padding: 12px 14px 16px;
+  }
+  .shop-main .product-card__title {
+    font-size: 13px;
+  }
+  .shop-main .product-card__price {
+    font-size: 14px;
+  }
+  .shop-main .product-card__action .btn {
+    min-height: 40px;
+    font-size: 13px;
+  }
+}
+
+/* Collection grid mobile */
+@media (max-width: 768px) {
+  .collection-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px 16px !important;
+  }
+}
+@media (max-width: 480px) {
+  .collection-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+}
+
+/* Collections page horizontal scroll mobile */
+@media (max-width: 768px) {
+  .collection-row {
+    padding: 40px 0 !important;
+  }
+  .collection-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+    margin-bottom: 20px !important;
+  }
+  .collection-header h2 {
+    font-size: 24px !important;
+  }
+  .scroll-item {
+    flex: 0 0 200px !important;
+    width: 200px !important;
+    min-width: 200px !important;
+    max-width: 200px !important;
+  }
+  .horizontal-product-scroll {
+    gap: 16px !important;
+  }
+}
+
+/* Products/Brands page mobile */
+@media (max-width: 768px) {
+  .brand-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+  .brand-card {
+    aspect-ratio: 3/4;
+  }
+  .brand-title {
+    font-size: 22px !important;
+  }
+  .brand-overlay {
+    padding: 20px 16px !important;
+  }
+}
+@media (max-width: 480px) {
+  .brand-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* PDP mobile */
+@media (max-width: 768px) {
+  .pdp-container {
+    gap: 30px !important;
+  }
+  .pdp-title {
+    font-size: clamp(28px, 7vw, 40px) !important;
+  }
+  .pdp-price {
+    font-size: 22px !important;
+  }
+  .pdp-actions .btn {
+    height: 50px !important;
+    font-size: 15px;
+  }
+}
+
+/* Sale banner mobile */
+@media (max-width: 480px) {
+  .sale-banner h2,
+  .sale-banner h3 {
+    font-size: clamp(32px, 10vw, 48px) !important;
+  }
+}
+
+/* Carousel mobile */
+@media (max-width: 768px) {
+  .carousel-item {
+    flex: 0 0 220px;
+  }
+  .carousel-header h2 {
+    font-size: clamp(24px, 6vw, 36px);
+  }
+}
+
+/* Pagination mobile */
+@media (max-width: 480px) {
+  .pagination {
+    flex-wrap: wrap;
+  }
+  .pagination .btn {
+    flex: 1;
+    min-width: 120px;
+  }
+}
+
