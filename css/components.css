@@ -255,8 +255,6 @@
 }
 .nav-logo span {
   font-weight: 900;
-}
-.nav-logo:hover {
   color: var(--color-brand);
 }
 
