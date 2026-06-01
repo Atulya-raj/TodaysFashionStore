@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TodaysFashion - Unleash Your Style</title>
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=DM+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=DM+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/components.css">
@@ -18,271 +21,327 @@
     <!-- Shopify Web Components -->
     <script type="module" src="https://cdn.shopify.com/storefront/web-components.js"></script>
 </head>
+
 <body>
-<shopify-store store-domain="todaysfashion-883.myshopify.com" public-access-token="150aa004803dd6eb6e97b430f08ab1a8">
-<shopify-cart id="main-cart"></shopify-cart>
+    <shopify-store store-domain="todaysfashion-883.myshopify.com"
+        public-access-token="150aa004803dd6eb6e97b430f08ab1a8">
+        <shopify-cart id="main-cart"></shopify-cart>
 
-    <!-- Main Navigation -->
-    <nav class="main-nav">
-        <div class="container nav-container">
-            <a href="index.html" class="nav-logo">TODAYS<span>F</span>ASHION</a>
-            
-            <div class="nav-links">
-                <a href="index.html" class="nav-link active">HOME</a>
-                <a href="collections.html" class="nav-link">COLLECTIONS</a>
-                <a href="shop.html" class="nav-link">SHOP</a>
-                <a href="products.html" class="nav-link">PRODUCTS</a>
-            </div>
-            
-            <div class="nav-actions">
-                <button class="nav-icon" aria-label="Search">
-                    <svg class="icon" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-                </button>
-                <button class="nav-icon" aria-label="Cart" onclick="document.getElementById('main-cart').showModal()">
-                    <svg class="icon" viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
-                </button>
-                <a href="#" class="btn btn-accent" style="min-height:36px; padding:0 16px; font-size:14px;">LOGIN</a>
-                <button class="mobile-menu-btn" aria-label="Menu">
-                    <svg class="icon" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
-                </button>
-            </div>
-        </div>
-    </nav>
+        <!-- Main Navigation -->
+        <nav class="main-nav">
+            <div class="container nav-container">
+                <a href="index.html" class="nav-logo">TODAYS<span>F</span>ASHION</a>
 
-    <!-- Mobile Drawer -->
-    <div class="mobile-drawer">
-        <div class="drawer-header">
-            <a href="index.html" class="nav-logo">TODAYS<span>F</span>ASHION</a>
-            <button class="close-drawer" aria-label="Close menu">×</button>
-        </div>
-        <div class="drawer-links">
-            <a href="index.html" class="drawer-link">HOME</a>
-            <a href="collections.html" class="drawer-link">COLLECTIONS</a>
-            <a href="shop.html" class="drawer-link">SHOP</a>
-            <a href="products.html" class="drawer-link">PRODUCTS</a>
-            <a href="contact.html" class="drawer-link">CONTACT</a>
-        </div>
-    </div>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link active">HOME</a>
+                    <a href="collections.html" class="nav-link">COLLECTIONS</a>
+                    <a href="shop.html" class="nav-link">SHOP</a>
+                    <a href="products.html" class="nav-link">PRODUCTS</a>
+                </div>
 
-    <!-- Section 1: Hero -->
-    <section class="hero bg-cream noise-bg" style="min-height: 85vh; display: flex; flex-direction: column; justify-content: center;">
-        <div class="container" style="text-align: center; width: 100%;">
-            <div class="hero-content" style="padding: 60px 0;">
-                <h1 class="hero-title font-display" style="font-size: 90px; line-height: 1.1; margin-bottom: 30px; letter-spacing: -1px;">
-                    <div style="margin-bottom: 10px;">UPGRADE YOUR WARDROBE</div>
-                    <div>SHOP TOP BRANDS</div>
-                </h1>
-                <p class="hero-desc reveal" style="font-size: 22px; line-height: 1.6; max-width: 750px; margin-left: auto; margin-right: auto; margin-bottom: 45px; color: #555;">Discover the latest collections from top global and Indian brands. Elevate your everyday style with premium denim, shirts, and casual wear.</p>
-                <div class="hero-actions reveal" style="justify-content: center;">
-                    <a href="shop.html" class="btn btn-primary" style="padding: 18px 48px; font-size: 18px; letter-spacing: 2px;">SHOP NOW</a>
+                <div class="nav-actions">
+                    <button class="nav-icon" aria-label="Search">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path
+                                d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                        </svg>
+                    </button>
+                    <button class="nav-icon" aria-label="Cart"
+                        onclick="document.getElementById('main-cart').showModal()">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path
+                                d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
+                        </svg>
+                    </button>
+                    <a href="#" class="btn btn-accent"
+                        style="min-height:36px; padding:0 16px; font-size:14px;">LOGIN</a>
+                    <button class="mobile-menu-btn" aria-label="Menu">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+                        </svg>
+                    </button>
                 </div>
             </div>
+        </nav>
+
+        <!-- Mobile Drawer -->
+        <div class="mobile-drawer">
+            <div class="drawer-header">
+                <a href="index.html" class="nav-logo">TODAYS<span>F</span>ASHION</a>
+                <button class="close-drawer" aria-label="Close menu">×</button>
+            </div>
+            <div class="drawer-links">
+                <a href="index.html" class="drawer-link">HOME</a>
+                <a href="collections.html" class="drawer-link">COLLECTIONS</a>
+                <a href="shop.html" class="drawer-link">SHOP</a>
+                <a href="products.html" class="drawer-link">PRODUCTS</a>
+                <a href="contact.html" class="drawer-link">CONTACT</a>
+            </div>
         </div>
-    </section>
 
+        <section class="hero bg-cream noise-bg"
+            style="min-height: 55vh; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden;">
 
+            <!-- Left Side: Image (Absolutely Positioned to the far left) -->
+            <div class="hero-image-left"
+                style="position: absolute; left: 0; bottom: 0; height: 100%; z-index: 1; pointer-events: none; display: flex; align-items: flex-end;">
+                <img src="img/hero-model.png" alt="Hero Model Left"
+                    style="height: 100%; max-width: 50vw; object-fit: contain; object-position: left bottom;">
+            </div>
 
-    <!-- Section 3: Signature Drops -->
-    <section class="section bg-white text-center">
-        <div class="container">
-            <h2 class="reveal" style="text-align: center; font-size: 3rem;">EXPLORE TOP COLLECTIONS</h2>
-            <p class="text-muted reveal" style="text-align: center; margin-bottom: 60px;">Curated styles from the most loved fashion brands in India.</p>
-            
-            <div class="grid-4 reveal">
-                <!-- Card 1 -->
-                <div class="minimal-card">
-                    <img src="https://placehold.co/400x400/4A5240/FFF/png?text=PREMIUM+DENIM" alt="Premium Denim">
-                    <div class="minimal-card-overlay">
-                        <span class="minimal-card-title">PREMIUM DENIM</span>
-                        <a href="collection.html?handle=premium-denim" class="minimal-card-link">EXPLORE →</a>
-                    </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="minimal-card">
-                    <img src="https://placehold.co/400x400/A0522D/FFF/png?text=CASUAL+SHIRTS" alt="Casual Shirts">
-                    <div class="minimal-card-overlay">
-                        <span class="minimal-card-title">CASUAL SHIRTS</span>
-                        <a href="collection.html?handle=casual-shirts" class="minimal-card-link">EXPLORE →</a>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="minimal-card">
-                    <img src="https://placehold.co/400x400/1A1A1A/FFF/png?text=T-SHIRTS+%26+POLOS" alt="T-Shirts & Polos">
-                    <div class="minimal-card-overlay">
-                        <span class="minimal-card-title">T-SHIRTS & POLOS</span>
-                        <a href="collection.html?handle=t-shirts-polos" class="minimal-card-link">EXPLORE →</a>
-                    </div>
-                </div>
-                <!-- Card 4 -->
-                <div class="minimal-card">
-                    <img src="https://placehold.co/400x400/0A0A0A/FFF/png?text=JACKETS+%26+OUTERWEAR" alt="Jackets & Outerwear">
-                    <div class="minimal-card-overlay">
-                        <span class="minimal-card-title">JACKETS & OUTERWEAR</span>
-                        <a href="collection.html?handle=jackets" class="minimal-card-link">EXPLORE →</a>
+            <!-- Right Side: Image (Absolutely Positioned to the far right) -->
+            <div class="hero-image-right"
+                style="position: absolute; right: -40px; bottom: 0; height: 104%; z-index: 1; pointer-events: none; display: flex; align-items: flex-end;">
+                <img src="img/hero-model-2.png" alt="Hero Model Right"
+                    style="height: 100%; max-width: 50vw; object-fit: contain; object-position: right bottom; transform: scaleX(1.15) translateY(40px);">
+            </div>
+
+            <div class="container" style="text-align: center; width: 100%; position: relative; z-index: 2;">
+                <div class="hero-content" style="padding: 60px 0;">
+                    <h1 class="hero-title font-display"
+                        style="font-size: 90px; line-height: 1.1; margin-bottom: 30px; letter-spacing: -1px;">
+                        <div style="margin-bottom: 10px;">UPGRADE <span class="text-brand">YOUR</span> WARDROBE</div>
+                        <div>SHOP <span class="text-brand">TOP</span> BRANDS</div>
+                    </h1>
+                    <p class="hero-desc reveal" style="font-size: 22px; line-height: 1.6; max-width: 750px; margin-left: auto; margin-right: auto; margin-bottom: 45px; color: #555;">Discover the <strong style="color: #111; font-weight: 600;">latest collections</strong> from <strong class="text-brand" style="font-weight: 700;">top global and Indian brands</strong>. Elevate your everyday style with <strong style="color: #111; font-weight: 600;">premium denim</strong>, shirts, and casual wear.</p>
+                    <div class="hero-actions reveal" style="justify-content: center; display: flex;">
+                        <a href="shop.html" class="btn btn-primary"
+                            style="padding: 18px 48px; font-size: 18px; letter-spacing: 2px;">SHOP NOW</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
 
 
-    <!-- Section 5: Find Your Category -->
-    <section class="section bg-white" style="background-color: #FAFAFA;">
-        <div class="container">
-            <h2 class="reveal">FIND YOUR CATEGORY</h2>
-            
-            <div class="tabs-container reveal">
-                <button class="tab-btn active" onclick="document.getElementById('home-category-collection').setAttribute('handle', 'all');">All</button>
-                <button class="tab-btn" onclick="document.getElementById('home-category-collection').setAttribute('handle', 'new-drop');">New Arrivals</button>
-                <button class="tab-btn" onclick="document.getElementById('home-category-collection').setAttribute('handle', 'streetwear');">Shirts & Polos</button>
-                <button class="tab-btn" onclick="document.getElementById('home-category-collection').setAttribute('handle', 'accessories');">Premium Denim</button>
-                <button class="tab-btn" onclick="document.getElementById('home-category-collection').setAttribute('handle', 'limited');">Smart Casuals</button>
-            </div>
+        <!-- Section 3: Signature Drops -->
+        <section class="section bg-white text-center">
+            <div class="container">
+                <h2 class="reveal" style="text-align: center; font-size: 3rem;">EXPLORE <span
+                        class="text-brand">TOP</span> COLLECTIONS</h2>
+                <p class="text-muted reveal" style="text-align: center; margin-bottom: 60px;">Curated styles from the
+                    most loved fashion brands in India.</p>
 
-            <shopify-context id="home-category-collection" type="collection" handle="all">
-                <template>
-                    <shopify-list-context type="product" query="collection.products" first="6" class="home-product-grid">
-                        <template>
-                            <div class="product-grid-filter" style="margin-bottom: 24px;">
-                                <div class="product-card">
-                                    <div class="product-card__image-container">
-                                        <a shopify-attr--href="'product.html?handle=' + product.handle">
-                                            <shopify-media query="product.featuredImage" class="product-card__image"></shopify-media>
-                                        </a>
-                                    </div>
-                                    <div class="product-card__info">
-                                        <a shopify-attr--href="'product.html?handle=' + product.handle" class="product-card__title" style="text-decoration:none; color:inherit;">
-                                            <shopify-data query="product.title"></shopify-data>
-                                        </a>
-                                        <div class="product-card__price" style="margin-top:6px;">
-                                            <shopify-money query="product.priceRange.minVariantPrice"></shopify-money>
-                                        </div>
-                                        <div class="product-card__action">
-                                            <a shopify-attr--href="'product.html?handle=' + product.handle" class="btn btn-primary" style="width: 100%;">VIEW DETAILS</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </template>
-                        <div shopify-loading-placeholder style="padding: 40px; text-align: center;">Loading products...</div>
-                    </shopify-list-context>
-                </template>
-                <div shopify-loading-placeholder style="padding: 40px; text-align: center;">Loading collection...</div>
-            </shopify-context>
-        </div>
-    </section>
-
-
-
-    <!-- Section 7: Sale Banner -->
-    <section class="section sale-banner">
-        <div class="lightning-bg"></div>
-        <div class="container reveal">
-            <h2>MEGA FASHION SALE</h2>
-            <h3>UP TO 50% OFF</h3>
-            <a href="shop.html" class="btn btn-accent">SHOP SALE NOW</a>
-        </div>
-    </section>
-
-    <!-- Section 8: Most Selling Products -->
-    <section class="section bg-white">
-        <div class="container">
-            <div class="carousel-header reveal">
-                <h2>TRENDING THIS WEEK</h2>
-                <div class="carousel-nav">
-                    <button class="carousel-btn prev" aria-label="Previous">←</button>
-                    <button class="carousel-btn next" aria-label="Next">→</button>
+                <div class="grid-4 reveal">
+                    <!-- Card 1 -->
+                    <a href="collection.html?handle=premium-denim" class="minimal-card">
+                        <img src="https://placehold.co/400x400/4A5240/FFF/png?text=PREMIUM+DENIM" alt="Premium Denim">
+                        <div class="minimal-card-overlay">
+                            <span class="minimal-card-title">PREMIUM DENIM</span>
+                            <span class="minimal-card-link">EXPLORE →</span>
+                        </div>
+                    </a>
+                    <!-- Card 2 -->
+                    <a href="collection.html?handle=casual-shirts" class="minimal-card">
+                        <img src="https://placehold.co/400x400/A0522D/FFF/png?text=CASUAL+SHIRTS" alt="Casual Shirts">
+                        <div class="minimal-card-overlay">
+                            <span class="minimal-card-title">CASUAL SHIRTS</span>
+                            <span class="minimal-card-link">EXPLORE →</span>
+                        </div>
+                    </a>
+                    <!-- Card 3 -->
+                    <a href="collection.html?handle=t-shirts-polos" class="minimal-card">
+                        <img src="https://placehold.co/400x400/1A1A1A/FFF/png?text=T-SHIRTS+%26+POLOS"
+                            alt="T-Shirts & Polos">
+                        <div class="minimal-card-overlay">
+                            <span class="minimal-card-title">T-SHIRTS & POLOS</span>
+                            <span class="minimal-card-link">EXPLORE →</span>
+                        </div>
+                    </a>
+                    <!-- Card 4 -->
+                    <a href="collection.html?handle=jackets" class="minimal-card">
+                        <img src="https://placehold.co/400x400/0A0A0A/FFF/png?text=JACKETS+%26+OUTERWEAR"
+                            alt="Jackets & Outerwear">
+                        <div class="minimal-card-overlay">
+                            <span class="minimal-card-title">JACKETS & OUTERWEAR</span>
+                            <span class="minimal-card-link">EXPLORE →</span>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <div class="carousel-container reveal">
-                <shopify-context type="collection" handle="landing-page-picks">
+        </section>
+
+
+
+        <!-- Section 5: Find Your Category -->
+        <section class="section bg-white" style="background-color: #FAFAFA;">
+            <div class="container">
+                <h2 class="reveal">FIND YOUR CATEGORY</h2>
+
+                <div class="tabs-container reveal">
+                    <button class="tab-btn active"
+                        onclick="document.getElementById('home-category-collection').setAttribute('handle', 'all');">All</button>
+                    <button class="tab-btn"
+                        onclick="document.getElementById('home-category-collection').setAttribute('handle', 'new-drop');">New
+                        Arrivals</button>
+                    <button class="tab-btn"
+                        onclick="document.getElementById('home-category-collection').setAttribute('handle', 'streetwear');">Shirts
+                        & Polos</button>
+                    <button class="tab-btn"
+                        onclick="document.getElementById('home-category-collection').setAttribute('handle', 'accessories');">Premium
+                        Denim</button>
+                    <button class="tab-btn"
+                        onclick="document.getElementById('home-category-collection').setAttribute('handle', 'limited');">Smart
+                        Casuals</button>
+                </div>
+
+                <shopify-context id="home-category-collection" type="collection" handle="all">
                     <template>
-                        <shopify-list-context type="product" query="collection.products" first="10">
+                        <shopify-list-context type="product" query="collection.products" first="6"
+                            class="home-product-grid">
                             <template>
-                                <div class="carousel-item product-card">
-                                    <a shopify-attr--href="'product.html?handle=' + product.handle" style="text-decoration: none; color: inherit;">
+                                <div class="product-grid-filter" style="margin-bottom: 24px;">
+                                    <div class="product-card">
                                         <div class="product-card__image-container">
-                                            <shopify-media query="product.featuredImage" class="product-card__image" width="400" height="500"></shopify-media>
+                                            <a shopify-attr--href="'product.html?handle=' + product.handle">
+                                                <shopify-media query="product.featuredImage"
+                                                    class="product-card__image"></shopify-media>
+                                            </a>
                                         </div>
                                         <div class="product-card__info">
-                                            <div class="product-card__title">
+                                            <a shopify-attr--href="'product.html?handle=' + product.handle"
+                                                class="product-card__title"
+                                                style="text-decoration:none; color:inherit;">
                                                 <shopify-data query="product.title"></shopify-data>
-                                            </div>
-                                            <div style="font-size:12px; color:var(--color-gray); font-family:var(--font-body); margin-top:2px; letter-spacing:0.1em; text-transform:uppercase;">
-                                                <shopify-data query="product.vendor"></shopify-data>
-                                            </div>
+                                            </a>
                                             <div class="product-card__price" style="margin-top:6px;">
-                                                <shopify-money query="product.priceRange.minVariantPrice"></shopify-money>
+                                                <shopify-money
+                                                    query="product.priceRange.minVariantPrice"></shopify-money>
+                                            </div>
+                                            <div class="product-card__action">
+                                                <a shopify-attr--href="'product.html?handle=' + product.handle"
+                                                    class="btn btn-primary" style="width: 100%;">VIEW DETAILS</a>
                                             </div>
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
                             </template>
-                            <div shopify-loading-placeholder style="padding: 20px;">Loading exclusive drops...</div>
+                            <div shopify-loading-placeholder style="padding: 40px; text-align: center;">Loading
+                                products...</div>
                         </shopify-list-context>
                     </template>
+                    <div shopify-loading-placeholder style="padding: 40px; text-align: center;">Loading collection...
+                    </div>
                 </shopify-context>
             </div>
-        </div>
-    </section>
+        </section>
 
 
 
+        <!-- Section 7: Sale Banner -->
+        <section class="section sale-banner">
+            <div class="lightning-bg"></div>
+            <div class="container reveal">
+                <h2>MEGA FASHION SALE</h2>
+                <h3>UP TO 50% OFF</h3>
+                <a href="shop.html" class="btn btn-accent">SHOP SALE NOW</a>
+            </div>
+        </section>
 
-
-
-
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-top">
-                <div class="footer-brand">
-                    <a href="index.html" class="nav-logo">TODAYS<span>F</span>ASHION</a>
-                    <p class="footer-desc">ELEVATE YOUR EVERYDAY. Discover the latest collections from premium global and Indian fashion brands.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link">In</a>
-                        <a href="#" class="social-link">Tw</a>
-                        <a href="#" class="social-link">Tk</a>
-                        <a href="#" class="social-link">Yt</a>
+        <!-- Section 8: Most Selling Products -->
+        <section class="section bg-white">
+            <div class="container">
+                <div class="carousel-header reveal">
+                    <h2>TRENDING THIS WEEK</h2>
+                    <div class="carousel-nav">
+                        <button class="carousel-btn prev" aria-label="Previous">←</button>
+                        <button class="carousel-btn next" aria-label="Next">→</button>
                     </div>
                 </div>
-                <div class="footer-col">
-                    <h4>SHOP</h4>
-                    <div class="footer-links">
-                        <a href="shop.html" class="footer-link">New Arrivals</a>
-                        <a href="shop.html" class="footer-link">Shirts</a>
-                        <a href="shop.html" class="footer-link">Jeans</a>
-                        <a href="shop.html" class="footer-link">T-Shirts</a>
-                        <a href="shop.html" class="footer-link">Accessories</a>
-                        <a href="shop.html" class="footer-link text-brand">Sale</a>
+                <div class="carousel-container reveal">
+                    <shopify-context type="collection" handle="landing-page-picks">
+                        <template>
+                            <shopify-list-context type="product" query="collection.products" first="10">
+                                <template>
+                                    <div class="carousel-item product-card">
+                                        <a shopify-attr--href="'product.html?handle=' + product.handle"
+                                            style="text-decoration: none; color: inherit;">
+                                            <div class="product-card__image-container">
+                                                <shopify-media query="product.featuredImage" class="product-card__image"
+                                                    width="400" height="500"></shopify-media>
+                                            </div>
+                                            <div class="product-card__info">
+                                                <div class="product-card__title">
+                                                    <shopify-data query="product.title"></shopify-data>
+                                                </div>
+                                                <div
+                                                    style="font-size:12px; color:var(--color-gray); font-family:var(--font-body); margin-top:2px; letter-spacing:0.1em; text-transform:uppercase;">
+                                                    <shopify-data query="product.vendor"></shopify-data>
+                                                </div>
+                                                <div class="product-card__price" style="margin-top:6px;">
+                                                    <shopify-money
+                                                        query="product.priceRange.minVariantPrice"></shopify-money>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </template>
+                                <div shopify-loading-placeholder style="padding: 20px;">Loading exclusive drops...</div>
+                            </shopify-list-context>
+                        </template>
+                    </shopify-context>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-top">
+                    <div class="footer-brand">
+                        <a href="index.html" class="nav-logo">TODAYS<span>F</span>ASHION</a>
+                        <p class="footer-desc">ELEVATE YOUR EVERYDAY. Discover the latest collections from premium
+                            global and Indian fashion brands.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link">In</a>
+                            <a href="#" class="social-link">Tw</a>
+                            <a href="#" class="social-link">Tk</a>
+                            <a href="#" class="social-link">Yt</a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4>SHOP</h4>
+                        <div class="footer-links">
+                            <a href="shop.html" class="footer-link">New Arrivals</a>
+                            <a href="shop.html" class="footer-link">Shirts</a>
+                            <a href="shop.html" class="footer-link">Jeans</a>
+                            <a href="shop.html" class="footer-link">T-Shirts</a>
+                            <a href="shop.html" class="footer-link">Accessories</a>
+                            <a href="shop.html" class="footer-link text-brand">Sale</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>SUPPORT</h4>
+                        <div class="footer-links">
+                            <a href="#" class="footer-link">FAQ</a>
+                            <a href="#" class="footer-link">Shipping</a>
+                            <a href="#" class="footer-link">Returns</a>
+                            <a href="#" class="footer-link">Size Guide</a>
+                            <a href="contact.html" class="footer-link">Contact</a>
+                        </div>
                     </div>
                 </div>
-
-                <div class="footer-col">
-                    <h4>SUPPORT</h4>
-                    <div class="footer-links">
-                        <a href="#" class="footer-link">FAQ</a>
-                        <a href="#" class="footer-link">Shipping</a>
-                        <a href="#" class="footer-link">Returns</a>
-                        <a href="#" class="footer-link">Size Guide</a>
-                        <a href="contact.html" class="footer-link">Contact</a>
+                <div class="footer-bottom">
+                    <div class="copyright">© 2026 TODAYSFASHION. ALL RIGHTS RESERVED.</div>
+                    <div class="payment-methods">
+                        <span>VISA</span> • <span>MC</span> • <span>UPI</span> • <span>PAYPAL</span>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <div class="copyright">© 2026 TODAYSFASHION. ALL RIGHTS RESERVED.</div>
-                <div class="payment-methods">
-                    <span>VISA</span> • <span>MC</span> • <span>UPI</span> • <span>PAYPAL</span>
-                </div>
-            </div>
-        </div>
-        <div class="footer-big-logo">TODAYS<span class="accent">F</span>ASHION</div>
-    </footer>
-</shopify-store>
+            <div class="footer-big-logo">TODAYS<span class="accent">F</span>ASHION</div>
+        </footer>
+    </shopify-store>
 
     <!-- JS -->
     <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
 </body>
+
 </html>
